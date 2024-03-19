@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { CartContext } from "./store/shopping-cart-context.jsx";
+
 import Header from "./components/Header.jsx";
 import Product from "./components/Product.jsx";
 import Shop from "./components/Shop.jsx";
@@ -64,7 +66,7 @@ function App() {
     }
 
     return (
-        <>
+        <CartContext.Provider>
             <Header cart={shoppingCart} onUpdateCartItemQuantity={handleUpdateCartItemQuantity} />
             <Shop>
                 {DUMMY_PRODUCTS.map(product => (
@@ -73,7 +75,7 @@ function App() {
                     </li>
                 ))}
             </Shop>
-        </>
+        </CartContext.Provider>
     );
 }
 
