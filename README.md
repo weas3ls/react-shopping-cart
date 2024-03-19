@@ -1,5 +1,7 @@
 # Shopping Cart
 
+This app showcases a simple shopping cart with the ability to add and remove items.
+
 ## How to run
 
 To run this project:
